@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form method="post" action="/signupform" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="text" name="firstName" placeholder="Enter First Name " required><br/><br/>
+        <input type="text" name="lastName" placeholder="Enter Last Name " required><br/><br/>
+        <input type="text" name="username" placeholder="Enter Username " required><br/><br/>
+        <input type="password" name="password" placeholder="Enter Password " required><br/><br/>
+        <input type="email" name="email" placeholder="Enter Email " required><br/><br/>
+        <input type="file" name="profileImage" placeholder="Upload ProfilePic " accept="image/*" required><br/><br/>
+        <input type="file" name="uploadFile" placeholder="Upload File " multiple="true" required><br/><br/>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
